@@ -1,44 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React＋Redux＋MaterialUI＋TypeScriptで作成したサンプルコードになります。
+主に、Reduxの勉強目的で実装しましたが、結構悩むところもあって、備忘録的なメモを残したいと思います。  
+なおReduxは「リダックス」と読むようですね・・・。  
 
-## Available Scripts
+本プロジェクトは [Create React App](https://github.com/facebook/create-react-app)で生成しております。
 
-In the project directory, you can run:
+## セットアップ  
+とりあえず、以下を見てもらって、各自`npm`でセットアップしておいてください。  
+https://github.com/poropi/SampleReactApp/blob/master/package.json  
 
-### `npm start`
+[ググ](https://www.google.co.jp/search?client=ubuntu&channel=fs&q=react+redux+typescript&ie=utf-8&oe=utf-8&hl=ja)れば、いくらでも出てくるので・・・。
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 悩みどころ  
+当然といえば当然ですが、実装する人によって、実装パターンなんて十人十色なんですよね・・・。  
+Reduxのようなアーキテクチャを用いたとしても、各自が同じようなコーディングデザインではないので、  
+個人的にも結構混乱してしまいました。  
+また、その記事自体も旧バージョンであったり、Redux実装楽にするライブラリを利用したり、しなかったりで、  
+なかなか思うように理解が進みませんでした。
+1週間くらい勉強して、やっとのことで実践できるくらいの理解ができましたので、自分のためにメモを残します。  
+なお、この記事自体も数カ月後には古くなってしまうかもしれませんので、ご了承ください・・・。
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## サンプル画面の仕様を確認
+とはいえで、画面的な仕様を決めないことには、Reduxでのコード設計もできないというものなので、  
+とりあえず、本件で利用している画面の仕様を以下に記します。
 
-### `npm test`
+画面については、MaterialUIのログインテンプレートを利用いたしました。  
+https://material-ui.com/getting-started/templates/sign-in/
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ここでやれることは、
+* メールアドレスの入力
+* パスワードの入力
+* ログインボタンを押下し、snackbarを表示する
 
-### `npm run build`
+の３つのアクションとなります。  
+ってことで、次から実装の確認です。
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 実装の確認
